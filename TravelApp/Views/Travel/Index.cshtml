@@ -1,0 +1,114 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model TravelApp.Models.Travel
+
+<div class="container">
+    <form asp-action="Index" asp-controller="Travel" method="post">
+        <div class="form-group">
+            <i class="fas fa-map-marker color-grey"></i>
+            <label class="label">Nereden</label>
+            <select name="originId" asp-for="OriginId" asp-items="@ViewBag.origin" onchange="OnChange(OriginId, DestinationId,1)" class="form-control">
+            </select>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-9">
+                    <i class="fas fa-map-marker color-grey"></i>
+                    <label class="label">Nereye</label>
+                </div>
+                <div class="col-3">
+                    <a class="swift" onclick="Swift(OriginId,DestinationId)">
+                        <i class="fas fa-retweet color-swift"></i>
+                    </a>
+                </div>
+            </div>
+            <select name="destinationId" asp-for="DestinationId" asp-items="@ViewBag.destination" onchange="OnChange(OriginId, DestinationId,2)" class="form-control">
+            </select>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fas fa-calendar color-grey"></i>
+                    <label class="label">Tarih</label>
+                </div>
+                <div class="col-9">
+                    <input id="tomorrow" onclick="ChangeDay(2)" type="button" value="Yarın" class="day" />
+                    <input id="today" onclick="ChangeDay(1)" type="button" value="Bugün" class="day-click" />
+                </div>
+            </div>
+            <input asp-for="DepartureDate" id="datepicker" type="datetime" asp-format="{dd/MM/yyyy}" class="form-control" value="@TempData["DepartureDate"]" />
+        </div>
+        <div class="form-group">
+            <input asp-action="Journey" type="submit" value="Bileti bul" class="btn btn-primary btn-search" />
+
+            <input type="hidden" id="hiddenOriginId" />
+            <input type="hidden" id="hiddenDestinationId" />
+        </div>
+    </form>
+</div>
+
+@section Scripts
+{
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            var minshowdate = new Date(@(DateTime.Now.Date.Year),
+                           @(DateTime.Now.Date.Month)-1,
+                           @(DateTime.Now.Date.Day));
+            $("#datepicker").datepicker({
+                dateFormat: "dd/mm/yy",
+                minDate: minshowdate,
+                constrainInput: false
+            });
+        });
+    </script>
+    <script>
+    function OnChange(OriginId, DestinationId,type) {
+
+        var hiddenOriginId = $("#hiddenOriginId").val();
+        var hiddenDestinationId = $("#hiddenDestinationId").val();
+        if (hiddenOriginId == '' && hiddenDestinationId == '') {
+            $("#hiddenOriginId").val('@TempData["OriginId"]');
+            hiddenOriginId = '@TempData["OriginId"]';
+            $("#hiddenDestinationId").val('@TempData["DestinationId"]');
+            hiddenDestinationId = '@TempData["DestinationId"]';
+        }
+
+        if (OriginId.value == DestinationId.value) {
+
+           var temp = OriginId.value;
+           if (type == 1) {
+                    DestinationId.value = hiddenOriginId;
+           }
+           else {
+                    OriginId.value = hiddenDestinationId;
+           }
+        }
+        hiddenOriginId = OriginId.value;
+        hiddenDestinationId = DestinationId.value;
+        $("#hiddenOriginId").val(OriginId.value);
+        $("#hiddenDestinationId").val(DestinationId.value);
+
+        }
+    function Swift(OriginId, DestinationId) {
+            var temp = OriginId.value;
+            OriginId.value = DestinationId.value;
+            DestinationId.value = temp;
+        }
+        function ChangeDay(type) {
+            if (type == 1) {
+
+                $("#today").removeClass('day').addClass('day-click');
+                $("#tomorrow").removeClass('day-click').addClass('day');
+                $("#datepicker").val('@DateTime.Now.ToString("dd/MM/yyyy")');
+            }
+            else {
+                $("#tomorrow").removeClass('day').addClass('day-click');
+                $("#today").removeClass('day-click').addClass('day');
+                $("#datepicker").val('@DateTime.Now.AddDays(1).ToString("dd/MM/yyyy")');
+            }
+        }
+    </script>
+}

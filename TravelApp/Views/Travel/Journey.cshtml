@@ -1,0 +1,26 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+
+<div class="container">
+
+    @foreach (var item in @ViewBag.journeys)
+    {
+        <div class="card bg-light mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-9">
+                        <div class="blue">Kalkış &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Varış</div>
+                        <div class="card-title hour-text">@item.Departure &nbsp; <i class="fas fa-arrow-right ft12"></i>&nbsp; @item.Arrival</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="price">@item.OriginalPrice </div>
+                    </div>
+                </div>
+                <div class="arrival-info">@item.Origin - @item.Destination</div>
+
+            </div>
+        </div>
+
+    }
+</div>

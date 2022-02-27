@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EOtvR1HHUDIkCFG5nCIW098glLPk46cyDUHFYsCjy0zX9ZKtU1mJwFSaMUx2HFR5ZWv2w/ruRN6jIyOk4tnl9g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\fatih\\OneDrive\\Masaüstü\\Code\\obilet\\TravelApp\\Travel.Services\\TravelServices.Logic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fatih\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

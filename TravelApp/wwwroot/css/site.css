@@ -1,0 +1,164 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}   
+.hour-text {
+    color: #192289;
+    font-size: 16px;
+    font-weight: bold;
+}
+.price {
+    background: #d23b38;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    width: 70px;
+    padding: 5px;
+}
+.arrival-info {
+    color: #083145;
+    font-size: 14px;
+}
+.nav {
+    display: inherit !important;
+    color: white;
+    background-color: #2F4EB4 !important;
+    font-size: 16px;
+}
+.center {
+    text-align:center
+}
+.arrow {
+    background-color: #2f4eb4 !important;
+    color: white;
+    font-size: 24px;
+}
+.arrow:hover{
+    background-color: #2f4eb4 !important;
+    color: white;
+    font-size: 24px;
+}
+.ft12 {
+    font-size: 12px !important;
+}
+.blue {
+    color: #192289;
+}
+.btn-search {
+    float: right;
+    background: #2F4EB4 !important;
+    padding: 5px 50px;
+    font-size: 17px
+}
+.swift {
+    border: 2px solid;
+    border-radius: 34px;
+    border-color: #707070;
+    font-size: 14px;
+    float: right;
+    padding: 5px;
+    margin-bottom: 2px;
+}
+.color-grey {
+   color: #9D9D9C;
+}
+.color-swift {
+    color: #707070;
+}
+.day-click {
+    color: white;
+    padding: 2px;
+    font-size: 12px;
+    float: right;
+    margin: 1px 10px;
+    width: 50px;
+    border-color: #5D686E;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    background: #5D686E !important;
+}
+.day {
+    color: #5D686E !important;
+    padding: 2px;
+    font-size: 12px;
+    float: right;
+    margin: 1px 10px;
+    width: 50px;
+    border-color: #5D686E;
+    border: 1px solid #5D686E;
+    border-radius: 0.25rem;
+    background: white;
+}
+.label {
+    color: #2F4EB4;
+    font-size: 15px;
+    font-weight: 600;
+}

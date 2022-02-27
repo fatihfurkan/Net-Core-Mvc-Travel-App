@@ -1,0 +1,11 @@
+C:\Users\fatih\OneDrive\Masaüstü\Code\obilet\TravelApp\Travel.Services\bin\Debug\net5.0\TravelServices.Logic.deps.json
+C:\Users\fatih\OneDrive\Masaüstü\Code\obilet\TravelApp\Travel.Services\bin\Debug\net5.0\TravelServices.Logic.dll
+C:\Users\fatih\OneDrive\Masaüstü\Code\obilet\TravelApp\Travel.Services\bin\Debug\net5.0\ref\TravelServices.Logic.dll
+C:\Users\fatih\OneDrive\Masaüstü\Code\obilet\TravelApp\Travel.Services\bin\Debug\net5.0\TravelServices.Logic.pdb
+C:\Users\fatih\OneDrive\Masaüstü\Code\obilet\TravelApp\Travel.Services\obj\Debug\net5.0\TravelServices.Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fatih\OneDrive\Masaüstü\Code\obilet\TravelApp\Travel.Services\obj\Debug\net5.0\TravelServices.Logic.AssemblyInfoInputs.cache
+C:\Users\fatih\OneDrive\Masaüstü\Code\obilet\TravelApp\Travel.Services\obj\Debug\net5.0\TravelServices.Logic.AssemblyInfo.cs
+C:\Users\fatih\OneDrive\Masaüstü\Code\obilet\TravelApp\Travel.Services\obj\Debug\net5.0\TravelServices.Logic.csproj.CoreCompileInputs.cache
+C:\Users\fatih\OneDrive\Masaüstü\Code\obilet\TravelApp\Travel.Services\obj\Debug\net5.0\TravelServices.Logic.dll
+C:\Users\fatih\OneDrive\Masaüstü\Code\obilet\TravelApp\Travel.Services\obj\Debug\net5.0\ref\TravelServices.Logic.dll
+C:\Users\fatih\OneDrive\Masaüstü\Code\obilet\TravelApp\Travel.Services\obj\Debug\net5.0\TravelServices.Logic.pdb
